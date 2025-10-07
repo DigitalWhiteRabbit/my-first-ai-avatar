@@ -83,7 +83,7 @@
         </ul>
       </nav>
       <a class="btn btn--primary btn--sm" href="#contact">Оставить заявку</a>
-      <button class="nav-toggle" aria-label="Открыть меню" aria-expanded="false" aria-controls="primary-navigation">
+      <button class="nav-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="primary-navigation">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -364,12 +364,38 @@
     // Простой мобильный тогглер меню
     const toggle = document.querySelector('.nav-toggle');
     const nav = document.querySelector('.main-nav');
+
+    const openMenu = () => {
+      if (!toggle || !nav) return;
+      nav.classList.add('is-open');
+      toggle.setAttribute('aria-expanded', 'true');
+      toggle.setAttribute('aria-label', 'Закрыть меню');
+    };
+
+    const closeMenu = () => {
+      if (!toggle || !nav) return;
+      nav.classList.remove('is-open');
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.setAttribute('aria-label', 'Открыть меню');
+    };
+
     if (toggle && nav) {
       toggle.addEventListener('click', () => {
         const expanded = toggle.getAttribute('aria-expanded') === 'true';
-        toggle.setAttribute('aria-expanded', String(!expanded));
-        toggle.setAttribute('aria-label', expanded ? 'Открыть меню' : 'Закрыть меню');
-        nav.classList.toggle('is-open');
+        expanded ? closeMenu() : openMenu();
+      });
+
+      document.addEventListener('keydown', event => {
+        if (event.key === 'Escape' && nav.classList.contains('is-open')) {
+          closeMenu();
+          toggle.focus();
+        }
+      });
+
+      document.addEventListener('click', event => {
+        if (!nav.classList.contains('is-open')) return;
+        if (event.target === toggle || nav.contains(event.target)) return;
+        closeMenu();
       });
     }
 
@@ -390,10 +416,8 @@
           behavior: reducedMotionQuery.matches ? 'auto' : 'smooth',
           block: 'start'
         });
-        if (nav && nav.classList.contains('is-open') && toggle) {
-          nav.classList.remove('is-open');
-          toggle.setAttribute('aria-expanded', 'false');
-          toggle.setAttribute('aria-label', 'Открыть меню');
+        if (nav && nav.classList.contains('is-open')) {
+          closeMenu();
         }
       });
     });

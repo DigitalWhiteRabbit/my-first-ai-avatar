@@ -372,7 +372,18 @@ a:focus-visible{outline:none; box-shadow:0 0 0 3px rgba(98,174,28,.35); border-r
 }
 @media (max-width: 720px){
   .main-nav{display:none}
-  .main-nav.is-open{display:block; position:absolute; top:64px; right:4%; background:var(--bg-alt); border:1px solid var(--stroke); border-radius:12px; padding:10px}
+  .main-nav.is-open{
+    display:block;
+    position:absolute;
+    top:64px;
+    right:4%;
+    background:var(--bg-alt);
+    border:1px solid var(--stroke);
+    border-radius:12px;
+    padding:10px;
+    box-shadow:var(--shadow);
+    z-index:1100;
+  }
   .main-nav.is-open .nav__list{flex-direction:column}
   .nav-toggle{display:inline-block}
   .form__row{grid-template-columns:1fr}
