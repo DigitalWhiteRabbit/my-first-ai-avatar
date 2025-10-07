@@ -1,0 +1,17 @@
+{
+  "name": "Luxury Girl Landing",
+  "short_name": "LuxuryGirl",
+  "description": "Адаптивный лендинг дизайнера с демо, преимуществами и формой обратной связи.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#101010",
+  "theme_color": "#101010",
+  "lang": "ru",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
+    }
+  ]
+}
