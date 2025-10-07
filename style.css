@@ -100,8 +100,16 @@ body{
 .btn:focus-visible{outline:none; box-shadow:0 0 0 4px rgba(98,174,28,.35)}
 .btn--sm{padding:8px 12px; font-size:14px}
 .btn--primary{background:var(--accent); color:#101010}
-.btn--ghost{background:transparent; color:var(--accent)}
-.btn--ghost:hover{color:var(--bg)}
+.btn--ghost{
+  background:transparent;
+  color:var(--accent);
+}
+.btn--ghost:hover,
+.btn--ghost:focus-visible{
+  background:#FFFFFF;
+  color:var(--bg);
+  border-color:#FFFFFF;
+}
 
 /* ====== Hero ====== */
 .hero{position:relative; overflow:hidden}

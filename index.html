@@ -373,7 +373,8 @@
       });
     }
 
-    // Плавный скролл для якорей
+    // Плавный скролл для якорей с учётом prefers-reduced-motion
+    const reducedMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
     document.querySelectorAll('a[href^="#"]').forEach(link => {
       link.addEventListener('click', event => {
         const targetId = link.getAttribute('href');
@@ -385,7 +386,10 @@
           return;
         }
         event.preventDefault();
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        target.scrollIntoView({
+          behavior: reducedMotionQuery.matches ? 'auto' : 'smooth',
+          block: 'start'
+        });
         if (nav && nav.classList.contains('is-open') && toggle) {
           nav.classList.remove('is-open');
           toggle.setAttribute('aria-expanded', 'false');
