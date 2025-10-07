@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Landing — Учебный шаблон</title>
+  <meta name="description" content="Минимальный HTML-шаблон лендинга для обучения: структура без картинок.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header" id="top">
+    <div class="container header__row">
+      <a class="logo" href="#top" aria-label="На главную">
+        <span class="logo__mark">LG</span>
+        <span class="logo__text">Luxury<span class="text-accent">Girl</span></span>
+      </a>
+      <nav class="main-nav" aria-label="Главное меню">
+        <ul class="nav__list">
+          <li><a href="#features">Преимущества</a></li>
+          <li><a href="#about">О нас</a></li>
+          <li><a href="#testimonials">Отзывы</a></li>
+          <li><a href="#cta">Контакты</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn--primary btn--sm" href="#cta">Оставить заявку</a>
+      <button class="nav-toggle" aria-label="Открыть меню" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero section">
+    <div class="container hero__grid">
+      <div class="hero__content">
+        <h1 class="hero__title">Заголовок лендинга</h1>
+        <p class="hero__subtitle">Короткий подзаголовок, который объясняет ценность и призывает к действию. Без изображений — только чистая структура.</p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#cta">Начать</a>
+          <a class="btn btn--ghost" href="#features">Узнать больше</a>
+        </div>
+      </div>
+      <div class="hero__visual placeholder" aria-hidden="true">
+        <div class="placeholder__inner">Hero-плейсхолдер</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features / Services -->
+  <section id="features" class="section section--alt">
+    <div class="container">
+      <header class="section__head">
+        <h2 class="section__title">Преимущества</h2>
+        <p class="section__subtitle">Три ключевых карточки — типичный паттерн лендингов.</p>
+      </header>
+      <div class="cards">
+        <article class="card">
+          <div class="card__media placeholder"><div class="placeholder__inner">Медиа</div></div>
+          <h3 class="card__title">Преимущество №1</h3>
+          <p class="card__text">Короткое описание блока. Можно заменить на товар/услугу.</p>
+          <a class="card__link" href="#cta" aria-label="Подробнее про преимущество 1">Подробнее →</a>
+        </article>
+        <article class="card">
+          <div class="card__media placeholder"><div class="placeholder__inner">Медиа</div></div>
+          <h3 class="card__title">Преимущество №2</h3>
+          <p class="card__text">Короткое описание. Сетка карточек адаптивная.</p>
+          <a class="card__link" href="#cta" aria-label="Подробнее про преимущество 2">Подробнее →</a>
+        </article>
+        <article class="card">
+          <div class="card__media placeholder"><div class="placeholder__inner">Медиа</div></div>
+          <h3 class="card__title">Преимущество №3</h3>
+          <p class="card__text">Текст-рыба для демонстрации структуры и стилей.</p>
+          <a class="card__link" href="#cta" aria-label="Подробнее про преимущество 3">Подробнее →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section">
+    <div class="container about__grid">
+      <div class="about__media placeholder"><div class="placeholder__inner">Фото/Видео</div></div>
+      <div class="about__content">
+        <h2 class="section__title">О нас</h2>
+        <p>Абзац текста, где обычно рассказывают про компанию, продукт или миссию. Здесь важно удерживать читабельную ширину строки и комфортные интервалы.</p>
+        <ul class="list">
+          <li>Пункт списка — чёткая выгода</li>
+          <li>Пункт списка — социальное доказательство</li>
+          <li>Пункт списка — гарантия/возврат</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="section section--alt">
+    <div class="container">
+      <header class="section__head">
+        <h2 class="section__title">Отзывы</h2>
+        <p class="section__subtitle">Просто статическая сетка (слайдер можно добавить позже в WP).</p>
+      </header>
+      <div class="testimonials">
+        <figure class="testimonial">
+          <blockquote>«Короткий отзыв. Всё было быстро и качественно!»</blockquote>
+          <figcaption>— Имя Фамилия</figcaption>
+        </figure>
+        <figure class="testimonial">
+          <blockquote>«Отличный сервис, буду обращаться снова.»</blockquote>
+          <figcaption>— Имя Фамилия</figcaption>
+        </figure>
+        <figure class="testimonial">
+          <blockquote>«Именно то, что нужно для запуска!»</blockquote>
+          <figcaption>— Имя Фамилия</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="cta" class="section cta">
+    <div class="container cta__box">
+      <h2 class="cta__title">Готовы к старту?</h2>
+      <p class="cta__text">Оставьте контакты — и мы вернёмся с предложением. Форма ниже — просто разметка без бэкенда.</p>
+      <form class="form" action="#" method="post" onsubmit="event.preventDefault()">
+        <div class="form__row">
+          <label class="form__field">
+            <span class="form__label">Ваше имя</span>
+            <input type="text" name="name" placeholder="Иван" required>
+          </label>
+          <label class="form__field">
+            <span class="form__label">Email</span>
+            <input type="email" name="email" placeholder="name@example.com" required>
+          </label>
+        </div>
+        <label class="form__field">
+          <span class="form__label">Сообщение</span>
+          <textarea name="message" rows="4" placeholder="Короткий запрос…"></textarea>
+        </label>
+        <button class="btn btn--primary" type="submit">Отправить</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer__grid">
+      <div>
+        <a class="logo" href="#top" aria-label="На главную">
+          <span class="logo__mark">LG</span>
+          <span class="logo__text">Luxury<span class="text-accent">Girl</span></span>
+        </a>
+        <p class="footer__text">Учебный шаблон. Без изображений и чужого контента.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Нижнее меню">
+        <ul class="nav__list nav__list--col">
+          <li><a href="#features">Преимущества</a></li>
+          <li><a href="#about">О нас</a></li>
+          <li><a href="#testimonials">Отзывы</a></li>
+          <li><a href="#cta">Контакты</a></li>
+        </ul>
+      </nav>
+      <div class="footer__legal">
+        <p>© 2025 Ваш бренд</p>
+        <a href="#">Политика конфиденциальности</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Простой мобильный тогглер меню
+    const toggle = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('.main-nav');
+    toggle.addEventListener('click', () => {
+      const expanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!expanded));
+      nav.classList.toggle('is-open');
+    });
+
+    // Плавный скролл для якорей
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const id = a.getAttribute('href');
+        const el = document.querySelector(id);
+        if (el) {
+          e.preventDefault();
+          el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
