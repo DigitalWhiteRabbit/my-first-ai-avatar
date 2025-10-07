@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Landing — Учебный шаблон</title>
-  <meta name="description" content="Минимальный HTML-шаблон лендинга для обучения: структура без картинок.">
+  <title>Luxury Girl — цифровой дизайнер и разработчик</title>
+  <meta name="description" content="Анна Смирнова создаёт адаптивные лендинги и digital-упаковку под ключ с современным дизайном и поддержкой.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -18,65 +18,159 @@
         <span class="logo__mark">LG</span>
         <span class="logo__text">Luxury<span class="text-accent">Girl</span></span>
       </a>
-      <nav class="main-nav" aria-label="Главное меню">
+      <nav id="primary-navigation" class="main-nav" aria-label="Главное меню">
         <ul class="nav__list">
           <li><a href="#features">Преимущества</a></li>
+          <li><a href="#tech">Технологии</a></li>
           <li><a href="#about">О нас</a></li>
+          <li><a href="#faq">FAQ</a></li>
           <li><a href="#testimonials">Отзывы</a></li>
-          <li><a href="#cta">Контакты</a></li>
+          <li><a href="#contact">Контакты</a></li>
         </ul>
       </nav>
-      <a class="btn btn--primary btn--sm" href="#cta">Оставить заявку</a>
-      <button class="nav-toggle" aria-label="Открыть меню" aria-expanded="false">
+      <a class="btn btn--primary btn--sm" href="#contact">Оставить заявку</a>
+      <button class="nav-toggle" aria-label="Открыть меню" aria-expanded="false" aria-controls="primary-navigation">
         <span></span><span></span><span></span>
       </button>
     </div>
   </header>
 
   <!-- Hero -->
-  <section class="hero section">
+  <section class="hero section section--tint">
     <div class="container hero__grid">
       <div class="hero__content">
-        <h1 class="hero__title">Заголовок лендинга</h1>
-        <p class="hero__subtitle">Короткий подзаголовок, который объясняет ценность и призывает к действию. Без изображений — только чистая структура.</p>
+        <p class="hero__eyebrow">Привет, я Анна</p>
+        <h1 class="hero__title">Создаю стильные сайты, которые помогают продавать</h1>
+        <p class="hero__subtitle">Помогу упаковать ваши услуги, выстроить структуру и запустить сайт без лишних сложностей. Сделаю проект под ключ и объясню, как управлять им самостоятельно.</p>
         <div class="hero__actions">
-          <a class="btn btn--primary" href="#cta">Начать</a>
-          <a class="btn btn--ghost" href="#features">Узнать больше</a>
+          <a class="btn btn--primary" href="#demo">Смотреть демо</a>
+          <a class="btn btn--ghost" href="#contact">Связаться</a>
         </div>
       </div>
-      <div class="hero__visual placeholder" aria-hidden="true">
-        <div class="placeholder__inner">Hero-плейсхолдер</div>
+      <div class="hero__media">
+        <img src="images/avatar.webp" alt="Декоративный портрет Анны" loading="lazy" decoding="async">
       </div>
     </div>
   </section>
 
-  <!-- Features / Services -->
-  <section id="features" class="section section--alt">
+  <!-- Features -->
+  <section id="features" class="section section--tint">
     <div class="container">
       <header class="section__head">
-        <h2 class="section__title">Преимущества</h2>
-        <p class="section__subtitle">Три ключевых карточки — типичный паттерн лендингов.</p>
+        <h2 class="section__title">Что вы получите</h2>
+        <p class="section__subtitle">Подборка ключевых преимуществ работы со мной — от стратегии до поддержки после запуска.</p>
       </header>
-      <div class="cards">
-        <article class="card">
-          <div class="card__media placeholder"><div class="placeholder__inner">Медиа</div></div>
-          <h3 class="card__title">Преимущество №1</h3>
-          <p class="card__text">Короткое описание блока. Можно заменить на товар/услугу.</p>
-          <a class="card__link" href="#cta" aria-label="Подробнее про преимущество 1">Подробнее →</a>
+      <div class="cards cards--features">
+        <article class="card card--feature">
+          <div class="card__icon" aria-hidden="true">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="24" r="22" stroke="currentColor" stroke-width="2" opacity="0.4" />
+              <circle cx="24" cy="24" r="10" fill="currentColor" opacity="0.9" />
+            </svg>
+          </div>
+          <h3 class="card__title">Персональная стратегия</h3>
+          <p class="card__text">Разберём цели и позиционирование, чтобы сайт отражал ваш бренд и бизнес-задачи.</p>
         </article>
-        <article class="card">
-          <div class="card__media placeholder"><div class="placeholder__inner">Медиа</div></div>
-          <h3 class="card__title">Преимущество №2</h3>
-          <p class="card__text">Короткое описание. Сетка карточек адаптивная.</p>
-          <a class="card__link" href="#cta" aria-label="Подробнее про преимущество 2">Подробнее →</a>
+        <article class="card card--feature">
+          <div class="card__icon" aria-hidden="true">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="24" r="22" stroke="currentColor" stroke-width="2" opacity="0.4" />
+              <circle cx="24" cy="24" r="10" fill="currentColor" opacity="0.9" />
+            </svg>
+          </div>
+          <h3 class="card__title">UX-структура</h3>
+          <p class="card__text">Выстрою понятную архитектуру страниц, чтобы посетители без труда находили нужное.</p>
         </article>
-        <article class="card">
-          <div class="card__media placeholder"><div class="placeholder__inner">Медиа</div></div>
-          <h3 class="card__title">Преимущество №3</h3>
-          <p class="card__text">Текст-рыба для демонстрации структуры и стилей.</p>
-          <a class="card__link" href="#cta" aria-label="Подробнее про преимущество 3">Подробнее →</a>
+        <article class="card card--feature">
+          <div class="card__icon" aria-hidden="true">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="24" r="22" stroke="currentColor" stroke-width="2" opacity="0.4" />
+              <circle cx="24" cy="24" r="10" fill="currentColor" opacity="0.9" />
+            </svg>
+          </div>
+          <h3 class="card__title">Современный дизайн</h3>
+          <p class="card__text">Продуманный визуал, адаптивные сетки и аккуратная типографика под вашу нишу.</p>
+        </article>
+        <article class="card card--feature">
+          <div class="card__icon" aria-hidden="true">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="24" r="22" stroke="currentColor" stroke-width="2" opacity="0.4" />
+              <circle cx="24" cy="24" r="10" fill="currentColor" opacity="0.9" />
+            </svg>
+          </div>
+          <h3 class="card__title">Контент-поддержка</h3>
+          <p class="card__text">Помогу подобрать тексты и медиа, чтобы сообщения звучали ясно и убедительно.</p>
+        </article>
+        <article class="card card--feature">
+          <div class="card__icon" aria-hidden="true">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="24" r="22" stroke="currentColor" stroke-width="2" opacity="0.4" />
+              <circle cx="24" cy="24" r="10" fill="currentColor" opacity="0.9" />
+            </svg>
+          </div>
+          <h3 class="card__title">Техническая оптимизация</h3>
+          <p class="card__text">Скорость загрузки, базовое SEO и корректная верстка под любые устройства.</p>
+        </article>
+        <article class="card card--feature">
+          <div class="card__icon" aria-hidden="true">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="24" r="22" stroke="currentColor" stroke-width="2" opacity="0.4" />
+              <circle cx="24" cy="24" r="10" fill="currentColor" opacity="0.9" />
+            </svg>
+          </div>
+          <h3 class="card__title">Сопровождение после запуска</h3>
+          <p class="card__text">Дам инструкции и поддержку, чтобы вы уверенно управляли сайтом дальше.</p>
         </article>
       </div>
+    </div>
+  </section>
+
+  <!-- Demo -->
+  <section id="demo" class="section section--tint">
+    <div class="container demo">
+      <div class="demo__media">
+        <video class="demo__video" controls poster="images/demo-poster.webp" preload="none">
+          Ваш браузер не поддерживает видео-тег.
+        </video>
+        <p class="demo__caption">Видеопрезентация демонстрирует процесс работы и финальные результаты проектов.</p>
+      </div>
+      <div class="demo__content">
+        <h2 class="section__title">Посмотрите короткое демо</h2>
+        <p class="section__subtitle">Мы собрали ключевые моменты сотрудничества в формате небольшого ролика, чтобы вы быстро оценили подход и этапы работы.</p>
+        <a class="btn btn--primary" href="#">Скачать пресс-кит</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tech -->
+  <section id="tech" class="section section--tint">
+    <div class="container">
+      <header class="section__head">
+        <h2 class="section__title">Технические параметры</h2>
+        <p class="section__subtitle">Коротко о том, как устроен проект внутри и какие технологии я применяю.</p>
+      </header>
+      <ul class="spec-list">
+        <li>
+          <span class="spec-list__label">Стек:</span>
+          <span>Чистый HTML5 и современный CSS без тяжёлых библиотек.</span>
+        </li>
+        <li>
+          <span class="spec-list__label">Адаптивность:</span>
+          <span>Резиновая сетка и flex/grid для корректного отображения на любом экране.</span>
+        </li>
+        <li>
+          <span class="spec-list__label">Производительность:</span>
+          <span>Минимум сторонних подключений, оптимизированные медиа и ленивые загрузки.</span>
+        </li>
+        <li>
+          <span class="spec-list__label">Доступность:</span>
+          <span>Чёткая иерархия заголовков, aria-атрибуты и контрастная палитра.</span>
+        </li>
+        <li>
+          <span class="spec-list__label">Расширяемость:</span>
+          <span>Структурированный код и переменные CSS для быстрой кастомизации.</span>
+        </li>
+      </ul>
     </div>
   </section>
 
@@ -92,6 +186,46 @@
           <li>Пункт списка — социальное доказательство</li>
           <li>Пункт списка — гарантия/возврат</li>
         </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Me -->
+  <section id="about-me" class="section about-me">
+    <div class="container about-me__inner">
+      <div class="about-me__content">
+        <h2 class="about-me__title">Обо мне</h2>
+        <p class="about-me__text">Меня зовут Анна, я создаю продуманные digital-решения для малого бизнеса и творческих проектов. Люблю сочетать эстетичный дизайн, удобную структуру и понятную стратегию продвижения.</p>
+        <p class="about-me__text">За последние 3 года помогла более 50 клиентам запустить сайты-визитки, лендинги и онлайн-магазины, которые привлекают новых клиентов без лишних усилий. Буду рада обсудить ваши задачи и подсказать оптимальный план.</p>
+        <a class="btn btn--primary about-me__button" href="#contact">Связаться</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="section">
+    <div class="container">
+      <header class="section__head">
+        <h2 class="section__title">Частые вопросы</h2>
+        <p class="section__subtitle">Если не нашли ответ — напишите, и я расскажу подробнее.</p>
+      </header>
+      <div class="faq">
+        <details class="faq-item">
+          <summary>Сколько времени занимает запуск сайта?</summary>
+          <p>В среднем на подготовку дизайна, верстку и тестирование уходит 2–3 недели. Срок зависит от объёма контента и количества правок.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Можно ли будет редактировать сайт самостоятельно?</summary>
+          <p>Да, по итогам работы вы получите инструкции и доступ ко всем материалам. Также предусмотрена короткая видео-памятка по обновлению контента.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Поможете с подбором текстов и изображений?</summary>
+          <p>Я помогу собрать структуру и подготовить базовые тексты. Если нужны профессиональные фото или копирайтинг, предложу проверенных партнёров.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Что входит в поддержку после сдачи проекта?</summary>
+          <p>В течение 30 дней после запуска я отвечаю на вопросы, корректирую мелочи и гарантирую стабильную работу страниц.</p>
+        </details>
       </div>
     </div>
   </section>
@@ -120,8 +254,8 @@
     </div>
   </section>
 
-  <!-- CTA -->
-  <section id="cta" class="section cta">
+  <!-- Contact -->
+  <section id="contact" class="section cta">
     <div class="container cta__box">
       <h2 class="cta__title">Готовы к старту?</h2>
       <p class="cta__text">Оставьте контакты — и мы вернёмся с предложением. Форма ниже — просто разметка без бэкенда.</p>
@@ -129,16 +263,16 @@
         <div class="form__row">
           <label class="form__field">
             <span class="form__label">Ваше имя</span>
-            <input type="text" name="name" placeholder="Иван" required>
+            <input type="text" name="name" placeholder="Иван" autocomplete="name" minlength="2" maxlength="60" required>
           </label>
           <label class="form__field">
             <span class="form__label">Email</span>
-            <input type="email" name="email" placeholder="name@example.com" required>
+            <input type="email" name="email" placeholder="name@example.com" autocomplete="email" required>
           </label>
         </div>
         <label class="form__field">
           <span class="form__label">Сообщение</span>
-          <textarea name="message" rows="4" placeholder="Короткий запрос…"></textarea>
+          <textarea name="message" rows="4" placeholder="Короткий запрос…" minlength="10" maxlength="1000" required></textarea>
         </label>
         <button class="btn btn--primary" type="submit">Отправить</button>
       </form>
@@ -158,9 +292,11 @@
       <nav class="footer-nav" aria-label="Нижнее меню">
         <ul class="nav__list nav__list--col">
           <li><a href="#features">Преимущества</a></li>
+          <li><a href="#tech">Технологии</a></li>
           <li><a href="#about">О нас</a></li>
+          <li><a href="#faq">FAQ</a></li>
           <li><a href="#testimonials">Отзывы</a></li>
-          <li><a href="#cta">Контакты</a></li>
+          <li><a href="#contact">Контакты</a></li>
         </ul>
       </nav>
       <div class="footer__legal">
@@ -174,11 +310,14 @@
     // Простой мобильный тогглер меню
     const toggle = document.querySelector('.nav-toggle');
     const nav = document.querySelector('.main-nav');
-    toggle.addEventListener('click', () => {
-      const expanded = toggle.getAttribute('aria-expanded') === 'true';
-      toggle.setAttribute('aria-expanded', String(!expanded));
-      nav.classList.toggle('is-open');
-    });
+    if (toggle && nav) {
+      toggle.addEventListener('click', () => {
+        const expanded = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', String(!expanded));
+        toggle.setAttribute('aria-label', expanded ? 'Открыть меню' : 'Закрыть меню');
+        nav.classList.toggle('is-open');
+      });
+    }
 
     // Плавный скролл для якорей
     document.querySelectorAll('a[href^="#"]').forEach(a => {
@@ -191,6 +330,7 @@
         }
       });
     });
+
   </script>
 </body>
 </html>
