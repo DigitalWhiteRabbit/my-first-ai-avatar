@@ -374,18 +374,22 @@
     }
 
     // Плавный скролл для якорей
-    document.querySelectorAll('a[href^="#"]').forEach(a => {
-      a.addEventListener('click', e => {
-        const id = a.getAttribute('href');
-        const el = document.querySelector(id);
-        if (el) {
-          e.preventDefault();
-          el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          if (nav && nav.classList.contains('is-open') && toggle) {
-            nav.classList.remove('is-open');
-            toggle.setAttribute('aria-expanded', 'false');
-            toggle.setAttribute('aria-label', 'Открыть меню');
-          }
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+      link.addEventListener('click', event => {
+        const targetId = link.getAttribute('href');
+        if (!targetId || targetId === '#') {
+          return;
+        }
+        const target = document.querySelector(targetId);
+        if (!target) {
+          return;
+        }
+        event.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        if (nav && nav.classList.contains('is-open') && toggle) {
+          nav.classList.remove('is-open');
+          toggle.setAttribute('aria-expanded', 'false');
+          toggle.setAttribute('aria-label', 'Открыть меню');
         }
       });
     });
