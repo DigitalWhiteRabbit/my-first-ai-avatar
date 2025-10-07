@@ -25,6 +25,29 @@ body{
   -moz-osx-font-smoothing:grayscale;
 }
 
+/* ====== Skip Link & Scroll Offsets ====== */
+.skip-link{
+  position:absolute;
+  top:8px;
+  left:8px;
+  padding:10px 14px;
+  border-radius:12px;
+  background:var(--accent);
+  color:#101010;
+  font-weight:600;
+  text-decoration:none;
+  transform:translateY(-150%);
+  transition:transform .3s ease;
+  z-index:1100;
+}
+.skip-link:focus,
+.skip-link:focus-visible{
+  transform:translateY(0);
+  box-shadow:0 0 0 4px rgba(98,174,28,.35);
+}
+
+:where(section, footer){scroll-margin-top:96px}
+
 .container{width:min(1120px, 92%); margin-inline:auto}
 .section{padding:72px 0}
 .section--alt{background:var(--bg-alt)}
@@ -371,6 +394,7 @@ a:focus-visible{outline:none; box-shadow:0 0 0 3px rgba(98,174,28,.35); border-r
   .testimonials{grid-template-columns:1fr 1fr}
 }
 @media (max-width: 720px){
+  :where(section, footer){scroll-margin-top:80px}
   .main-nav{display:none}
   .main-nav.is-open{
     display:block;
